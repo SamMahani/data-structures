@@ -23,7 +23,7 @@ var Queue = function() {
     //if a value exists in storage
     if ( currSize > 0 ) {
       //temporarily store the value
-      let tempVal = storage[currFirstIndex];
+      var tempVal = storage[currFirstIndex];
       //delete first stored value
       delete storage[currFirstIndex];
       //move our first index by incrementing

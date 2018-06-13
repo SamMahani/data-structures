@@ -1,44 +1,41 @@
 var Queue = function() {
-// Use an object with numeric keys to store values
+  // Use an object with numeric keys to store values
   var storage = {};
+
   var someInstance = {};
   // Implement the methods below
 
-
+  // variables to be used by methods below
   var currFirstIndex = 0;
   var currLastIndex = 0;
+  var currSize = 0;
 
   someInstance.enqueue = function(value) {
-    //store value by adding one to currentEnd (automatically updates currentEnd)
+    //store value by adding one to currentEnd 
     storage[currLastIndex] = value;
+
+    //increment last index
     currLastIndex += 1;
 
-    //call size.increment
-    this.size.increment();
+    //increment size
+    currSize++;
   };
 
   someInstance.dequeue = function() {
-  //function to delete first node of collection
-  var deleteKey = function() {
-    delete storage[currFirstIndex];
-    currFirstIndex += 1;
-
-
-    deleteKey();
+    //delete first stored value
+    if ( currSize > 0 ) {
+      let tempVal = storage[currFirstIndex];
+      delete storage[currFirstIndex];
+      currFirstIndex += 1;
+  
+      //decrement size
+      currSize--;
+      return tempVal;
+    }
   };
 
   someInstance.size = function() {
-    //instantiate initial size at creation as 0
-    //function to increment size
-    //function to decrement size
-
-    //function to get current value
-
-    //return size
+    return currSize;
   };
-
   return someInstance;
 };
-
-
-//somewhere a new queue is created

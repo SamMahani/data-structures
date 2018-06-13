@@ -1,9 +1,9 @@
 var Queue = function() {
-  // Use an object with numeric keys to store values
-  var storage = {};
-
   var someInstance = {};
   // Implement the methods below
+
+  // Use an object with numeric keys to store values
+  var storage = {};
 
   // variables to be used by methods below
   var currFirstIndex = 0;
@@ -13,29 +13,33 @@ var Queue = function() {
   someInstance.enqueue = function(value) {
     //store value by adding one to currentEnd 
     storage[currLastIndex] = value;
-
     //increment last index
-    currLastIndex += 1;
-
+    currLastIndex++;
     //increment size
     currSize++;
   };
 
   someInstance.dequeue = function() {
-    //delete first stored value
+    //if a value exists in storage
     if ( currSize > 0 ) {
+      //temporarily store the value
       let tempVal = storage[currFirstIndex];
+      //delete first stored value
       delete storage[currFirstIndex];
-      currFirstIndex += 1;
-  
-      //decrement size
+      //move our first index by incrementing
+      currFirstIndex++;
+      //decrement size of container
       currSize--;
+      //return temporarily stored value
       return tempVal;
     }
   };
 
   someInstance.size = function() {
+    //return current size of container
     return currSize;
   };
+
+  //return container
   return someInstance;
 };

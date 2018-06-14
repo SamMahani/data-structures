@@ -20,19 +20,29 @@ var Queue = function() {
 
 var queueMethods = {};
 //add enqueue method with value input
-  //add input value to object at last index property
+queueMethods.enqueue = function(value) {
+  //add input value to storage at last index property
+  
   //increment last index property
   //increment current size
+};
 
 //add dequeue method
+queueMethods.dequeue = function() {
   //if last index propety is greater than or equeal to first index property
-    //temporarily save the value at first index in object
-    //delete the value at first index in object
+    //temporarily save the value at first index in storage
+    //delete the value at first index in storage
     //decrement current size
     //return temporarily saved value
+};
 
 //add size method
+queueMethods.size = function() {
   //return current size
+  return this.currSize;
+};
+
+
 
 
 

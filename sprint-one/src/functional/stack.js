@@ -17,7 +17,7 @@ var Stack = function() {
 
   someInstance.pop = function() {
     //if current index is greater than or equal to 0
-    if( currIndex >= 0 ) {
+    if ( currIndex >= 0 ) {
       //save current key to temporary variable
       var tempVal = storage[currIndex];
       //delete current key

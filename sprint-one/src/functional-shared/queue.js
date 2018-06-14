@@ -3,18 +3,25 @@ var Queue = function() {
   // but try not not reference your old code in writing the new style.
 
   //create instance object
-  //add collector property object
+  var instance = {};
+  //add storage property object
+  instance.storage = {};
   //add current size property 
+  instance.currSize = 0;
   //add current first index property 
+  instance.currFirstIndex = 0;
   //add current last index property
+  instance.currLastIndex = 0;
   //add methods via extend
+  _.extend(instance, queueMethods);
   //return instance
+  return instance;
 };
 
 var queueMethods = {};
 //add enqueue method with value input
-  //increment last index property
   //add input value to object at last index property
+  //increment last index property
   //increment current size
 
 //add dequeue method

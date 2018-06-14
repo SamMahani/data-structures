@@ -4,25 +4,34 @@ var Stack = function() {
   // Use an object with numeric keys to store values
   var storage = {};
 
-  //current index variable intialized to 0
+  //current index variable intialized to -1
+  var currIndex = -1;
 
   // Implement the methods below
   someInstance.push = function(value) {
-    //push value to current index plus 1
     //increment current index value
+    currIndex++;
+    //push value to current index
+    storage[currIndex] = value;
   };
 
   someInstance.pop = function() {
     //if current index is greater than or equal to 0
+    if( currIndex >= 0 ) {
       //save current key to temporary variable
+      var tempVal = storage[currIndex];
       //delete current key
+      delete storage[currIndex];
       //decrement current index
+      currIndex--;
       //return temprary variable
-
+      return tempVal;
+    }
   };
 
   someInstance.size = function() {
     //return current index plus 1
+    return currIndex + 1;
   };
 
   //return function
@@ -59,6 +68,8 @@ Approximation::
   Done
 
 Verification::
+  Done
 
 Implementation::
+  Done
 */

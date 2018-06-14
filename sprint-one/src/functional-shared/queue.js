@@ -6,3 +6,30 @@ var Queue = function() {
 var queueMethods = {};
 
 
+
+
+
+/*
+Specification::IOCE
+  Input: 
+
+  Output: 
+    side effects:
+
+  Constraints:
+   
+  Edge Cases:
+
+
+Justification::what are you creating
+
+Explanation::
+
+Visualization::
+
+Approximation::
+ 
+Verification::
+
+Implementation::
+*/

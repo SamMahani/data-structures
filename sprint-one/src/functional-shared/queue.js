@@ -32,7 +32,7 @@ queueMethods.enqueue = function(value) {
 //add dequeue method
 queueMethods.dequeue = function() {
   //if last index propety is greater than or equeal to first index property
-  if (this.currLastIndex >= this.currFirstIndex) {
+  if (this.currSize > 0) {
     //temporarily save the value at first index in storage
     var tempValToReturn = this.storage[this.currFirstIndex];
     //delete the value at first index in storage
@@ -40,7 +40,7 @@ queueMethods.dequeue = function() {
     //increment first index property
     this.currFirstIndex++;
     //decrement current size property
-    this.currSize++;
+    this.currSize--;
     //return temporarily saved value
     return tempValToReturn;
   }

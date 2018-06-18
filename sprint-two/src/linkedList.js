@@ -6,22 +6,19 @@ var LinkedList = function() {
   list.addToTail = function(value) {
     //create node
     var newNode = Node(value);
-    //if linked list is empty
-    if(list.head === null && list.tail === null) {
+    if (list.head === null && list.tail === null) {
+      //if linked list is empty
       //assign new node to list head
       list.head = newNode;
       list.tail = newNode;
-    }
-    //if list.head and list.tail are equal and not null
-    else if(list.head === list.tail && list.head !== null) {
-     //point head node to new node
-     list.head.next = newNode;
-     //make sure the node that the tail is point to, points to node 2
-     list.tail = newNode;
-    }
-
-    //third time addToTail is called
-    else {
+    } else if (list.head === list.tail && list.head !== null) {
+      //if list.head and list.tail are equal and not null
+      //point head node to new node
+      list.head.next = newNode;
+      //make sure the node that the tail is point to, points to node 2
+      list.tail = newNode;
+    } else {
+      //third time addToTail is called
       //change what previous node points to
       list.tail.next = newNode;
       //chnge tail to point to node
@@ -47,7 +44,7 @@ var LinkedList = function() {
         return true;
       }
     }
-      return false;
+    return false;
   };
   
   return list;

@@ -51,8 +51,8 @@ Queue.prototype.size = function() {
 //IOCE
 //I: String value
 //O:
-  //Queue function will return an object instant
-  //Dequeue method will return dequeued value
+////Queue function will return an object instant
+////Dequeue method will return dequeued value
 //C: Dequeue method should not dequeue or return anything
 //E: none
 
